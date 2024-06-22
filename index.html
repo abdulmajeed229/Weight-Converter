@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 250px;
+            width: 300px;
+            background-color: rgb(247, 245, 245);
+            border-radius: 10px;
+            padding: 20px;
+            /* text-align: center; */
+            box-shadow: 0px 0px 5px rgb(168, 168, 243);
+        }
+
+        label {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 500;
+        }
+
+        input[type="text"] {
+
+            height: 35px;
+            width: 95%;
+            background-color: transparent;
+            border: none;
+            border: 1px solid rgb(212, 211, 211);
+            border-radius: 5px;
+            outline: none;
+            font-size: 18px;
+            padding-left: 10px;
+
+        }
+
+        button {
+
+            height: 40px;
+            width: 100%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            border: 1px solid rgb(212, 211, 211);
+            border-radius: 10px;
+            background-color: transparent;
+            background-color: rgb(105, 105, 243);
+            color: white;
+            cursor: pointer ;
+
+        }
+
+        h1 {
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+
+    <div class="box">
+
+        <label for="">Weight in kg</label>
+
+        <br>
+        <br>
+
+        <input type="text" name="" id="kg">
+
+        <br>
+        <br>
+
+        <label for="">Weight in lbs</label>
+
+        <br>
+        <br>
+
+        <input type="text" name="" id="lbs" >
+
+        <br><br>
+
+        <button onclick="foo()">Reset All</button>
+
+    </div>
+
+    <script>
+
+        let kg = document.getElementById('kg');
+
+        let lbs = document.getElementById('lbs');
+
+       
+
+        kg.addEventListener('input', function () {
+
+            let a = this.value;
+
+            let b = a * 2.20462;
+
+            lbs.value = b;
+
+        });
+
+        lbs.addEventListener('input', function () {
+
+            let b = this.value ;
+            let a = b / 2.20462 ;
+
+            kg.value = a;
+            value = ""
+
+        });
+
+        function foo(){
+
+            location.reload ;
+        }
+    </script>
+</body>
+
+</html>
